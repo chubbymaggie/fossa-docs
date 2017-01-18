@@ -4,14 +4,16 @@ If you are reading this guide inside of FOSSA, you have already completed setup 
 
 FOSSA requires the modules `fossa-core` and `fossa-agent` to be running in order to work.
 
-**Minimum Requirements:**
+## Minimum Requirements
+
 - Postgres 9.3+
 - Node.js 4.2.3
 - Mac OSX or Linux
 
 If you want to get started with FOSSA immediately, scroll down to the [Quick Start](#quick-start) section. *NOTE: the Quick Start method is not ideal for production performance and should only be used for testing/evaluation.*
 
-**Reccomended Additions:**
+## Recommended Additions
+
 - Provision at least 1 (ideally 3 or more) machine dedicated to `fossa-agent`
 - Provision 1 machine dedicated to `fossa-core`
 - Redis, MongoDB or a separate store for caching
@@ -34,7 +36,7 @@ If you want to get started with FOSSA immediately, scroll down to the [Quick Sta
 
 Install
 
-## <a name="quick-start">#</a> Quick Start (for testing)
+## Quick Start<a name="quick-start"> </a>
 
 If you want to get started with FOSSA as quickly as possible in order to test/evaluate the tool, this method outlines the simplest way to get started on a single machine.
 

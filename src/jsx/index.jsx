@@ -24,14 +24,15 @@ _.each(require_doc.keys(), route => {
 })
 
 function slugToTitle (slug) {
-  return slug.replace('-', ' ').replace(/(^| )(.)/g, $1 => $1.toUpperCase())
+  return slug.replace('-', ' ').replace(/(^| )(.)/g, $1 => $1.toUpperCase()).replace(')', '.')
 }
 
 var Documentation = React.createClass({
   render () {
-    var page
+    var page, activeCategory
     try {
       page = React.createElement(require_doc('./' + (this.props.params.splat || 'index') + '.md'))
+      activeCategory = this.props.params.splat.split('/')[0]
     } catch (e) {}
     return (
       <div className='container margin-top documentation'>
@@ -41,8 +42,8 @@ var Documentation = React.createClass({
             <div className='col-md-3'>
               <div className='docs-nav'>
                 {createFragment(_.mapObject(_.omit(routes, '/'), (pages, category) => <div>
-                  <h4 key={'$docs-category-' + category}>{slugToTitle(category)}</h4>
-                  <ul className='nav nav-pills'>
+                  <h3 key={'$docs-category-' + category} className={category == activeCategory ? 'active' : null}>{slugToTitle(category)}</h3>
+                  <ul className='nav nav-pills nav-stacked'>
                     {_.map(pages, route => <li key={'$docs-page-' + route}><Link activeClassName='active' to={'/docs/' + category + '/' + nuc(route)}>{slugToTitle(route)}</Link></li>)}
                   </ul>
                   <br />

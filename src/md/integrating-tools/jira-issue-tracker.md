@@ -88,8 +88,8 @@ Now that both services are configured, you may associate projects in FOSSA with 
 
 Inside of FOSSA under a project's settings, set:
 
- - **Issue Tracker Type** to `JIRA` 
- - **JIRA Project Key**
+- **Issue Tracker Type** to `JIRA` 
+- **JIRA Project Key**
 
 You can find the project key by looking:
 
