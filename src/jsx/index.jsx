@@ -36,29 +36,57 @@ var Documentation = React.createClass({
     } catch (e) {}
     return (
       <div className='container margin-top documentation'>
-        <div className='card'>
-          <Helmet title='Documentation' />
-          <div className='row'>
-            <div className='col-md-3'>
-              <div className='docs-nav'>
-                {createFragment(_.mapObject(_.omit(routes, '/'), (pages, category) => <div>
-                  <h3 key={'$docs-category-' + category} className={category == activeCategory ? 'active' : null}>{slugToTitle(category)}</h3>
-                  <ul className='nav nav-pills nav-stacked'>
-                    {_.map(pages, route => <li key={'$docs-page-' + route}><Link activeClassName='active' to={'/docs/' + category + '/' + nuc(route)}>{slugToTitle(route)}</Link></li>)}
-                  </ul>
-                  <br />
-                </div>))}
-              </div>
+        <Helmet title='Documentation' />
+        <div className='row doc-quick-links'>
+          <div className='col-md-3 doc-quick-link'>
+            <Link activeClassName='active' to={'#'}>
+              <i className='fa fa-circle-o large' />
+              <h3>Quick Start</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
+            </Link>
+          </div>
+          <div className='col-md-3 doc-quick-link'>
+            <Link activeClassName='active' to={'#'}>
+              <i className='fa fa-circle-o large' />
+              <h3>Customize Policies</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
+            </Link>
+          </div>
+          <div className='col-md-3 doc-quick-link'>
+            <Link activeClassName='active' to={'#'}>
+              <i className='fa fa-circle-o large' />
+              <h3>Manage Files</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
+            </Link>
+          </div>
+          <div className='col-md-3 doc-quick-link'>
+            <Link activeClassName='active' to={'#'}>
+              <i className='fa fa-circle-o large' />
+              <h3>Resolve Issues</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
+            </Link>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-3'>
+            <div className='docs-nav'>
+              {createFragment(_.mapObject(_.omit(routes, '/'), (pages, category) => <div>
+                <h3 key={'$docs-category-' + category} className={category == activeCategory ? 'active' : null}>{slugToTitle(category)}</h3>
+                <ul className='nav nav-pills nav-stacked'>
+                  {_.map(pages, route => <li key={'$docs-page-' + route}><Link activeClassName='active' to={'/docs/' + category + '/' + nuc(route)}>{slugToTitle(route)}</Link></li>)}
+                </ul>
+                <br />
+              </div>))}
             </div>
-            <div className='col-md-9 documentation-container'>
-              <div className='documentation-body'>
-                {page ||
-                <div>
-                  <h1>No Documentation Available</h1>
-                  No documentation is available for <b>"{slugToTitle(this.props.params.splat)}"</b>. {' '}
-                  <a href='mailto:support@fossa.io'>Request Documentation</a>
-                </div>}
-              </div>
+          </div>
+          <div className='col-md-9 documentation-container'>
+            <div className='documentation-body'>
+              {page ||
+              <div>
+                <h1>No Documentation Available</h1>
+                No documentation is available for <b>"{slugToTitle(this.props.params.splat)}"</b>. {' '}
+                <a href='mailto:support@fossa.io'>Request Documentation</a>
+              </div>}
             </div>
           </div>
         </div>

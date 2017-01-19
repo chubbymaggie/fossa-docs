@@ -166,10 +166,11 @@
 
   & {
     border-right: solid 1px fade(@colorSecondaryText, 10%);
+    padding-top: @leading;
 
     .nav >li > a {
-      padding: 0;
-      margin: 1em 0;
+      padding: 0.5rem;
+      margin: 0.5rem 0 0.5rem -0.5rem;
     }
 
     a {
@@ -207,6 +208,78 @@
     }
     h6 {
       font-size: @scale / 4 * @baseFontSize;
+    }
+  }
+}
+
+.doc-quick-links {
+  @import (multiple) "reset.less";
+  @import (multiple) "colors.less";
+
+  @baseFontSize: 16px;
+  // in pixels. This would result in 22px on desktop
+  @baseLineHeight: 1.5;
+  // how large the line height is as a multiple of font size
+  @leading: @baseLineHeight * 1rem;
+  @scale: 1;
+
+  & {
+    h1 {
+      font-size: 2 * @scale * @baseFontSize;
+      font-weight: bold;
+      line-height: 2 * @scale * @baseFontSize;
+    }
+    h2 {
+      font-size: 1.5 * @scale * @baseFontSize;
+      font-weight: bold;
+      line-height: 1.5 * @scale * @baseFontSize;
+    }
+    h3 {
+      font-size: 1.1 * @scale * @baseFontSize;
+      font-weight: bold;
+    }
+    h3.active {
+      color: @accentPrimary;
+    }
+    h4 {
+      font-size: @scale / 2 * @baseFontSize;
+    }
+    h5 {
+      font-size: @scale / 3 * @baseFontSize;
+    }
+    h6 {
+      font-size: @scale / 4 * @baseFontSize;
+    }
+
+    div.doc-quick-link {
+      & > a,
+      & > a:link,
+      & > a:hover,
+      & > a:visited {
+        height: 15rem;
+        display: block;
+        text-decoration: none;
+
+        & > * {
+          margin: @leading/2;
+        }
+      }
+
+      & > a,
+      & > a:link,
+      & > a:visited {
+        border-bottom: 1px solid @accentSecondary;
+        padding: 0;
+      }
+
+      & > a:hover {
+        background: @secondaryLight;
+        border-bottom: 1px solid @accentPrimary;
+      }
+
+      .large {
+        font-size: 4em;
+      }
     }
   }
 }
