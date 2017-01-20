@@ -40,28 +40,36 @@ var Documentation = React.createClass({
         <div className='row doc-quick-links'>
           <div className='col-md-3 doc-quick-link'>
             <Link activeClassName='active' to={'#'}>
-              <i className='fa fa-circle-o large' />
+              <div className='navigation-item-icon'>
+                <img className='img--h' src='/img/quick-start-fossa.svg' />
+              </div>
               <h3>Quick Start</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
             </Link>
           </div>
           <div className='col-md-3 doc-quick-link'>
             <Link activeClassName='active' to={'#'}>
-              <i className='fa fa-circle-o large' />
+              <div className='navigation-item-icon'>
+                <img className='img--h' src='/img/customize-policies.svg' />
+              </div>
               <h3>Customize Policies</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
             </Link>
           </div>
           <div className='col-md-3 doc-quick-link'>
             <Link activeClassName='active' to={'#'}>
-              <i className='fa fa-circle-o large' />
+              <div className='navigation-item-icon'>
+                <img className='img--h' src='/img/manage-files.svg' />
+              </div>
               <h3>Manage Files</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
             </Link>
           </div>
           <div className='col-md-3 doc-quick-link'>
             <Link activeClassName='active' to={'#'}>
-              <i className='fa fa-circle-o large' />
+              <div className='navigation-item-icon'>
+                <img className='img--h' src='/img/resolve-issues.svg' />
+              </div>
               <h3>Resolve Issues</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
             </Link>

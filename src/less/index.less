@@ -2,7 +2,7 @@
 .documentation-container {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-  @import (multiple) "fix.less";
+  @import (multiple) "global.less";
 
   & > .documentation-body {
     margin-bottom: @leading;
@@ -61,11 +61,6 @@
         margin-bottom: 0;
       }
     }
-    blockquote {
-      line-height: @leading;
-      margin-top: @leading;
-      margin-bottom: @leading;
-    }
 
     /* Headings */
     h1, h2, h3, h4, h5, h6 {
@@ -96,58 +91,12 @@
     h6 {
       font-size: @scale / 4 * @baseFontSize;
     }
-    pre {
-      background: @backgroundSecondary !important;
-      border: 1px solid @accentSecondary !important;
-      border-radius: 3px !important;
-      color: @colorPrimary !important;
-      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
-      padding: 2em;
-      max-width: 800px;
-      white-space: pre-wrap;
-      margin: @leading 0;
-    }
-
-    pre > code {
-      background: @backgroundSecondary !important;
-      border: none !important;
-      border-radius: 0 !important;
-      color: @colorPrimary !important;
-      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
-      padding: 0;
-      margin: 0;
-    }
-
-    :not(pre) > code {
-      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
-      background: @backgroundSecondary !important;
-      border: 1px solid @accentSecondary !important;
-      border-radius: 3px !important;
-      color: @colorPrimary !important;
-      padding: 3px !important;
-      white-space: nowrap;
-    }
-
-    blockquote {
-      border-left: 5px solid @accentSecondary;
-      padding: 1rem;
-
-      p {
-        margin:0;
-        padding:0;
-      }
-    }
-
-    img {
-      border: solid 1px @colorSecondaryText;
-      max-width: 100%;
-    }
   }
 }
 .docs-nav {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-  @import (multiple) "fix.less";
+  @import (multiple) "global.less";
 
   & {
     padding-top: @leading;
@@ -204,7 +153,7 @@
 .doc-quick-links {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-  @import (multiple) "fix.less";
+  @import (multiple) "global.less";
 
   & {
     h1, h2, h3, h4, h5, h6 {
@@ -246,6 +195,7 @@
       & > a:visited {
         height: 15rem;
         display: block;
+        overflow: hidden;
         text-decoration: none;
 
         & > * {
