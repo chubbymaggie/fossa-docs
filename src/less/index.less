@@ -2,17 +2,9 @@
 .documentation-container {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-
-  @baseFontSize: 16px;
-  // in pixels. This would result in 22px on desktop
-  @baseLineHeight: 1.5;
-  // how large the line height is as a multiple of font size
-  @leading: @baseLineHeight * 1rem;
-  @scale: 1;
+  @import (multiple) "fix.less";
 
   & > .documentation-body {
-    font-size: @baseFontSize;
-    -webkit-font-smoothing: antialiased;
     margin-bottom: @leading;
 
     /* Copy & Lists */
@@ -77,9 +69,7 @@
 
     /* Headings */
     h1, h2, h3, h4, h5, h6 {
-
-      /* Change heading typefaces here */
-      font-family: 'Open Sans', 'Arial', sans-serif;
+      font-family: 'blender', 'Open Sans', 'Arial', sans-serif;
       padding: @leading 0 0 0;
       margin: 0 0 @leading 0;
       color: @colorPrimary;
@@ -107,11 +97,11 @@
       font-size: @scale / 4 * @baseFontSize;
     }
     pre {
-      background: @accentTernary !important;
+      background: @backgroundSecondary !important;
       border: 1px solid @accentSecondary !important;
       border-radius: 3px !important;
       color: @colorPrimary !important;
-      font-family: Consolas, Monaco, Andale Mono, monospace;
+      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
       padding: 2em;
       max-width: 800px;
       white-space: pre-wrap;
@@ -119,17 +109,18 @@
     }
 
     pre > code {
-      background: @accentTernary !important;
+      background: @backgroundSecondary !important;
       border: none !important;
       border-radius: 0 !important;
       color: @colorPrimary !important;
+      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
       padding: 0;
       margin: 0;
     }
 
     :not(pre) > code {
-      font-family: Consolas, Monaco, Andale Mono, monospace;
-      background: @accentTernary !important;
+      font-family: 'menlo', Consolas, Monaco, Andale Mono, monospace !important;
+      background: @backgroundSecondary !important;
       border: 1px solid @accentSecondary !important;
       border-radius: 3px !important;
       color: @colorPrimary !important;
@@ -156,16 +147,9 @@
 .docs-nav {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-
-  @baseFontSize: 16px;
-  // in pixels. This would result in 22px on desktop
-  @baseLineHeight: 1.5;
-  // how large the line height is as a multiple of font size
-  @leading: @baseLineHeight * 1rem;
-  @scale: 1;
+  @import (multiple) "fix.less";
 
   & {
-    border-right: solid 1px fade(@colorSecondaryText, 10%);
     padding-top: @leading;
 
     .nav >li > a {
@@ -181,6 +165,11 @@
         color: @colorPrimary;
         font-weight: bold;
       }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'blender', 'Open Sans', 'Arial', sans-serif;
+      color: @colorPrimary;
     }
 
     h1 {
@@ -215,15 +204,13 @@
 .doc-quick-links {
   @import (multiple) "reset.less";
   @import (multiple) "colors.less";
-
-  @baseFontSize: 16px;
-  // in pixels. This would result in 22px on desktop
-  @baseLineHeight: 1.5;
-  // how large the line height is as a multiple of font size
-  @leading: @baseLineHeight * 1rem;
-  @scale: 1;
+  @import (multiple) "fix.less";
 
   & {
+    h1, h2, h3, h4, h5, h6 {
+      color: @colorBtnPrimary;
+    }
+
     h1 {
       font-size: 2 * @scale * @baseFontSize;
       font-weight: bold;
@@ -235,11 +222,8 @@
       line-height: 1.5 * @scale * @baseFontSize;
     }
     h3 {
-      font-size: 1.1 * @scale * @baseFontSize;
+      font-size: @scale * @baseFontSize;
       font-weight: bold;
-    }
-    h3.active {
-      color: @accentPrimary;
     }
     h4 {
       font-size: @scale / 2 * @baseFontSize;
@@ -249,6 +233,10 @@
     }
     h6 {
       font-size: @scale / 4 * @baseFontSize;
+    }
+
+    .active {
+      color: @accentPrimary;
     }
 
     div.doc-quick-link {
