@@ -37,7 +37,7 @@ var Documentation = React.createClass({
     return (
       <div className='container margin-top documentation'>
         <Helmet title='Documentation' />
-        <div className='row doc-quick-links'>
+        {/*<div className='row doc-quick-links'>
           <div className='col-md-3 doc-quick-link'>
             <Link activeClassName='active' to={'#'}>
               <div className='navigation-item-icon'>
@@ -74,7 +74,7 @@ var Documentation = React.createClass({
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales justo sit amet turpis dignissim.</p>
             </Link>
           </div>
-        </div>
+        </div>*/}
         <div className='row'>
           <div className='col-md-3'>
             <div className='docs-nav'>
