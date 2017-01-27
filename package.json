@@ -1,0 +1,19 @@
+{
+  "name": "fossa-docs",
+  "version": "0.1.0",
+  "description": "Fossa documentation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fossas/fossa-docs.git"
+  },
+  "keywords": [
+    "fossa",
+    "docs"
+  ],
+  "author": "Abraham Elmahrek <abe@fossa.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fossas/fossa-docs/issues"
+  },
+  "homepage": "https://github.com/fossas/fossa-docs#readme"
+}
