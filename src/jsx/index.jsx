@@ -24,7 +24,7 @@ _.each(require_doc.keys(), route => {
 })
 
 function slugToTitle (slug) {
-  return slug.replace('-', ' ').replace(/(^| )(.)/g, $1 => $1.toUpperCase()).replace(')', '.')
+  return slug.replace('-', ' ').replace(/(^| )(.)/g, $1 => $1.toUpperCase())
 }
 
 var Documentation = React.createClass({
