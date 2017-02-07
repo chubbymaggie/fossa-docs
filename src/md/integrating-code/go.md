@@ -16,7 +16,7 @@ Dependencies are extracted without a version if a version locking file is not pr
 
 **Revision Locking**
 
-If a `Godeps.json` or `vendor.json` file is provided for revision locking, Fossa will try to use this info to download the correct dependencies.
+If a `Godeps.json` or `vendor.json` file is provided for revision locking, Fossa will try to use this info to download the correct version of the dependencies.
 
 **Version Control Systems**
 
