@@ -1,6 +1,6 @@
-# Python
+# Golang
 
-FOSSA support for Golang is in Alpha.
+FOSSA support for Golang is in **Alpha**.
 
 ## Configuration
 
@@ -18,7 +18,7 @@ Dependencies are extracted without a version if a version locking file is not pr
 
 If a `Godeps.json` or `vendor.json` file is provided for revision locking, Fossa will try to use this info to download the correct dependencies.
 
-### Version Control Systems
+**Version Control Systems**
 
 Golang projects refer to dependencies in Version Control Systems (VCS). The following VCSs are supported by Golang:
 
