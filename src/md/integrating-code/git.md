@@ -29,3 +29,8 @@ Any build processes that depend on submodules will have to manually install subm
 FOSSA does not currently support other SCMs directly, but will still resolve them if needed by another package manager (i.e. npm, CocoaPods, etc...).
 
 More SCMs are slated for future releases -- please contact suppot@fossa.io to request an SCM integration.
+
+## Known Issues
+
+- Repositories without any commits or branches cannot be imported
+- Repositories without any files cannot be analyzed
