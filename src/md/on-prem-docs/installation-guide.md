@@ -2,7 +2,7 @@
 
 **This doc only applies for FOSSA on-prem users!  Ignore if you use app.fossa.io**
 
-This guide will help you set up your machine's environment to install FOSSA on `Ubuntu 14.04 LTS`. Make sure you have the necessary [prerequisites](advance-prerequisites) before beginning. 
+This guide will help you set up your machine's environment to install FOSSA on `Ubuntu 14.04 LTS`. Make sure you have the necessary [prerequisites](../advance-prerequisites) before beginning. 
 
 **Important! Run this guide as a superuser via `sudo -s`.**
 
@@ -144,4 +144,4 @@ fossa start 4
 
 ## Updating FOSSA
 
-See the [FOSSA CLI commands](managing-instance) for more details on how to manage and update the appliance.
+See the [FOSSA CLI commands](../managing-instance) for more details on how to manage and update the appliance.
