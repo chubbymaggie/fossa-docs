@@ -34,3 +34,4 @@ More SCMs are slated for future releases -- please contact suppot@fossa.io to re
 
 - Repositories without any commits or branches cannot be imported
 - Repositories without any files cannot be analyzed
+- Repository search matches against the whole repository name
