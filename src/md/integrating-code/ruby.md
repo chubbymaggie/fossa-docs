@@ -6,8 +6,8 @@ FOSSA supports projects that use Rubygems and Bundler.
 
 We look for and analyze the following files for license and dependency information
  - `.gemspec`
- - `.Gemfile`
- - `.Gemfile.lock`
+ - `Gemfile`
+ - `Gemfile.lock`
 
 FOSSA will find any package available on [www.rubygems.org](http://www.rubygems.org)
 
