@@ -9,7 +9,7 @@ You can add a project to FOSSA in a few ways **Dashboard > Add Project**:
 
 By default, FOSSA will automatically set up automatic updates, code review integrations and more if you use a service (non-manual) import method:
 
-![Importing projects](/img/importing-projects.png "Importing projects")
+![Importing projects](/img/import-projects.png "Importing projects")
 
 1. Select your organization
 2. Select one or more repositories (on the same page)
