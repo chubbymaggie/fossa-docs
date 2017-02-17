@@ -2,7 +2,9 @@
 
 ## Rubygems
 
-FOSSA supports projects that use Rubygems and Bundler. We use `Ruby version 2.3.3`
+FOSSA support for Rubygems is in **Beta**.
+
+FOSSA supports projects that use Rubygems and Bundler. We are currently on `Ruby v2.3.3`
 
 We look for and analyze the following files for license and dependency information
  - `.gemspec`

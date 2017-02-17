@@ -3,6 +3,7 @@
 Fossa supports Swift and Objective-C Cocoa projects with both CocoaPods and Carthage.
 
 ## CocoaPods
+FOSSA support for CocoaPods is in **Alpha**.
 
 Fossa is using CocoaPods Version ~1.0. If your Podfile is built using an earlier version, there is a chance that it may not build correctly. To upgrade [See doc](http://blog.cocoapods.org/CocoaPods-1.0/)
 
@@ -26,6 +27,8 @@ Here's some of the metadata that's pulled in:
 - Authors
 
 ## Carthage
+
+FOSSA support for Carthage is in **Beta**.
 
 Fossa scans through your Project and analyzes any Cartfile that is found. Cartfile.private and Cartfile.resolved files are ignored. It grabs dependencies based on:
 

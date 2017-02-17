@@ -2,6 +2,8 @@
 
 Fossa supports Rust with Cargo.
 
+FOSSA support for Cargo is in **Alpha**.
+
 ## Configuration
 
 Fossa supports 1 form of configuration for Rust projects:

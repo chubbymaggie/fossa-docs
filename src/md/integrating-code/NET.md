@@ -2,6 +2,8 @@
 
 ## Nuget
 
+FOSSA support for Nuget is in **Beta**.
+
 FOSSA supports .NET projects that use Nuget.
 
 We look for and analyze the following files for license and dependency information
