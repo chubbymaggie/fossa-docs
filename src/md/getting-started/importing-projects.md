@@ -17,7 +17,7 @@ By default, FOSSA will automatically set up automatic updates, code review integ
 
 Once imported, you will be redirected to the project or your dashboard.
 
-## <a name="supported-environments">#</a> Currently Code Supported Environments
+## <a name="supported-environments">#</a> Currently Supported Environments
 
 As long as FOSSA can reach your code, it will download and scan all of it for license information.  To discover and organize additional dependencies, FOSSA integrates with various other methods:
 
