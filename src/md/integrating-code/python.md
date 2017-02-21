@@ -1,6 +1,11 @@
 # Python
 
-FOSSA supports Python projects through `setuptools (Alpha)` and `pip (Beta)`.
+FOSSA supports Python projects through 2 package managers:
+
+- `setuptools`
+- `pip`
+
+FOSSA support for Python is in **Alpha**.
 
 ## Configuration
 
