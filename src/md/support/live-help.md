@@ -1,6 +1,6 @@
 # Getting Live Help
 
-At any point you can contact FOSSA support by clicking the chat bubble in the bottom-right corner of your screen.
+At any point you can contact FOSSA support by [clicking the chat bubble](javascript:window.Intercom%28'showNewMessage'%29) in the bottom-right corner of your screen.
 
 If no support member is available live, feel free to email [support@fossa.io](mailto:support@fossa.io) and we'll assist you as soon as we can.
 
