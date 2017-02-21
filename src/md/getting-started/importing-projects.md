@@ -49,9 +49,9 @@ In addition to code environments, FOSSA supports other ways of integrating with 
 
 - [Atlassian JIRA](../integrating-tools/jira-issue-tracker)
 - [Slack](../integrating-tools/slack)
-- [Bitbucket Server/Atlassian Stash **On-Prem Only**](../integrating-tools/bitbucket-server-(stash))
+- [Bitbucket Server/Atlassian Stash **On-Prem Only**][1]
 - [npm On-Site (npm Enterprise) **On-Prem Only**](../integrating-tools/npm-enterprise)
-- [Private Registries (Artifactory) **On-Prem Only**](../integrating-tools/private-registries-(artifactory))
+- [Private Registries (Artifactory) **On-Prem Only**][2]
 - Github Pull Requests (code review, automatically setup if importing from GitHub)
 - Email notifications
 
@@ -62,3 +62,6 @@ Coming Soon:
 ## Request Integrations
 
 To request more integrations or ask about an integration in development, contact [support@fossa.io](mailto:support@fossa.io)
+
+[1]: ../integrating-tools/bitbucket-server-(stash)
+[2]: ../integrating-tools/private-registries-(artifactory)

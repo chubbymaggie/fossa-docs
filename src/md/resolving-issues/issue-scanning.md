@@ -82,7 +82,7 @@ There are four scan detail settings to customize.
   This sets the depth and file coverage for scanning for an unlicensed dependency. If set to **Common License Files**, the scan results will be a little more noisy, so for *Limited* and *Standard* Level of Detail, this is set to **100% Code Coverage**.
 
 * **Policy Conflict Scanner**  
-  This sets the depth and file coverage for policy checks. For information on policies, view the [Policy Documentation][1]
+  This sets the depth and file coverage for policy checks. For information on policies, view the [Policy Documentation](../policies/overview)
 
 * **Attribution File/Bill-of-Materials (BOM) Generation**  
   This sets the depth and file coverage for Attribution files
@@ -111,6 +111,3 @@ the licenses associated with it:
 and the issue change history:
 
 ![issue history](/img/issue-history.png)
-
-
-[1]: http://localhost:9578/docs/policies/1)-overview
