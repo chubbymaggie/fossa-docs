@@ -23,7 +23,7 @@ Dependencies are extracted from the `install_requires` parameter in a projects `
 
 When possible, source code is downloaded over binary formats like *.egg* and *.whl*. If an egg or wheel is downloaded, its contents are inspected to find dependency information.
 
-### Version Control Systems
+**Version Control Systems**
 
 Python projects can refer to dependencies in a Version Control System (VCS). The following VCSs are supported by Python:
 
