@@ -23,7 +23,7 @@
   Fossa pulls is every dependency and all your dependencies' dependencies. This is a recursive operation that can pull in thousands of dependencies. Issues are created against each dependency that is included. There are a couple of strategies that can help reduce the noise:
 
   - Some times the best thing to do is limit what you look at the triage and fix issues. Navigate to issue scan settings (**Project Settings > Issue Scanners**) and lower your level of detail.
-  - Create policies that best reflect what you're interested. See the [policies](../policies/1.-overview) documentation for more information.
+  - Create policies that best reflect what you're interested. See the [policies](../policies/overview) documentation for more information.
   - Some languages allow you to limit which dependencies you look at by **scope**. Take a peek at the [Java](../integrating-code/java) documentation for more detail.
 
 4. How can I generate reports in Fossa?

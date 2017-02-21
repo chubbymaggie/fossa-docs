@@ -82,7 +82,13 @@ var Documentation = React.createClass({
               {createFragment(_.mapObject(_.omit(routes, '/'), (pages, category) => <div>
                 <h3 key={'$docs-category-' + category} className={category == activeCategory ? 'active' : null}>{slugToTitle(category)}</h3>
                 <ul className='nav nav-pills nav-stacked'>
-                  {_.map(pages, route => <li key={'$docs-page-' + route}><Link activeClassName='active' to={'/docs/' + category + '/' + nuc(route)}>{slugToTitle(route)}</Link></li>)}
+                  {_.map(_.reduce(pages, (routes, route) => {
+                    if (route == 'overview') {
+                      return _.union([route], routes)
+                    } else {
+                      return _.union(routes, [route])
+                    }
+                  }, []), route => <li key={'$docs-page-' + route}><Link activeClassName='active' to={'/docs/' + category + '/' + nuc(route)}>{slugToTitle(route)}</Link></li>)}
                 </ul>
                 <br />
               </div>))}
