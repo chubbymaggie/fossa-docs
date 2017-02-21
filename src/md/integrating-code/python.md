@@ -15,15 +15,15 @@ The `environment variables` used during project build is configurable via **Proj
 
 ## Dependencies
 
-**distutils and setuptools**
+### distutils and setuptools
 
 Dependencies are extracted from the `install_requires` parameter in a projects `setup.py` file. If the `setup.py` file has been customized, Fossa may not be able to pull out dependencies.
 
-**Eggs and Wheels**
+### Eggs and Wheels
 
 When possible, source code is downloaded over binary formats like *.egg* and *.whl*. If an egg or wheel is downloaded, its contents are inspected to find dependency information.
 
-**Version Control Systems**
+### Version Control Systems
 
 Python projects can refer to dependencies in a Version Control System (VCS). The following VCSs are supported by Python:
 

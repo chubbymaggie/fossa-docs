@@ -10,15 +10,13 @@ The `environment variables` used during project build is configurable via **Proj
 
 ## Dependencies
 
-**General**
-
 Dependencies are extracted without a version if a version locking file is not provided. Fossa will attempt to choose an existing version, otherwise fetch the latest commit on the master branch.
 
-**Revision Locking**
+### Revision Locking
 
 If a `Godeps.json` or `vendor.json` file is provided for revision locking, Fossa will try to use this info to download the correct version of the dependencies.
 
-**Version Control Systems**
+### Version Control Systems
 
 Golang projects refer to dependencies in Version Control Systems (VCS). The following VCSs are supported by Golang:
 

@@ -44,15 +44,15 @@ Here's some of the metadata that's pulled in:
 
 ### Dependencies
 
-**Optional**
+### Optional
 
 Optional dependencies are included in analysis and are grok'ed by Fossa. The optional dependencies are tagged as `Optional` by Fossa and are not included beyond depth 1.
 
-**Scope**
+### Scope
 
 `Dependency Scope` is included in analysis and is selectable in Fossa. Choosing different project scopes allows you to choose which dependencies are included in issue scans and in the UI.
 
-**Transitive Excludes**
+### Transitive Excludes
 
 Dependencies that are excluded transitively are also grok'ed by Fossa. If a transitive dependency is expicitly excluded, Fossa will exclude that dependency from its issue scans and in the UI. If another dependency brings in the excluded transitive dependency, then it will be included. These excludes are scoped to dependencies, not projects.
 
