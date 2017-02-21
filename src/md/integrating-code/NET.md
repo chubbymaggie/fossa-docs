@@ -1,8 +1,6 @@
 # .NET
 
-## Nuget
-
-FOSSA support for Nuget is in **Beta**.
+## Nuget (Alpha)
 
 FOSSA supports .NET projects that use Nuget.
 
@@ -18,7 +16,7 @@ We currently use the [NuGet API v3](https://docs.microsoft.com/en-us/nuget/api/n
 
 ## License files
 
-If a license file is given as a URL (in a .nuspec file via the `licenseUrl` property) FOSSA will attempt to go out and retrieve the license file and add to the project root. These will be labeled as `LICENSE_<license-name>.txt` when viewing license matches inside FOSSA
+If a license file is given as a URL (in a `.nuspec` file via the `licenseUrl` property) FOSSA will attempt to go out and retrieve the license file and add to the project root. These will be labeled as `LICENSE_<license-name>.txt` when viewing license matches inside FOSSA
 
 ## Dependency Resolution
 

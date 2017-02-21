@@ -24,10 +24,10 @@ As long as FOSSA can reach your code, it will download and scan all of it for li
 - Arbitrary [Git repos and submodules](../integrating-code/git)
 - [Javascript (Node.js, Bower, NPM)](../integrating-code/javascript)
 - [Java (Maven/Gradle)](../integrating-code/java)
-- [*.NET (Nuget)* **BETA***](../integrating-code/NET)
-- [*Ruby (Rubygems) **BETA***](../integrating-code/ruby)
-- [*Python (Pip - **BETA***, Setuptools/DistTools - **Alpha**)](../integrating-code/python)
-- [*iOS (CocoaPods - **ALPHA***, Carthage - **BETA***)](../integrating-code/iOS)
+- [*.NET (Nuget) **Alpha***](../integrating-code/NET)
+- [*Ruby (Rubygems) **Alpha***](../integrating-code/ruby)
+- [*Python (Pip - **Alpha***, Setuptools/DistTools - **Alpha**)](../integrating-code/python)
+- [*iOS (CocoaPods - **Alpha***, Carthage - **Alpha**)](../integrating-code/iOS)
 - [*Golang **Alpha***](../integrating-code/go)
 - [*Rust (Cargo) **Alpha***](../integrating-code/rust)
 
@@ -37,7 +37,6 @@ Coming Soon:
 - Scala (Sbt)
 - Haskell
 - PHP (Composer)
-- C, C++ (Yocto)
 
 Every month we're actively adding more integrations!  For unsupported environments, FOSSA will still run for your repository -- however it may either miss some dependency data or have trouble organizing information in the UI.
 

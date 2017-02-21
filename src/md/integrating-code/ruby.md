@@ -1,8 +1,6 @@
 # Ruby
 
-## Rubygems
-
-FOSSA support for Rubygems is in **Beta**.
+## Rubygems (Alpha)
 
 FOSSA supports projects that use Rubygems and Bundler. We are currently on `Ruby v2.3.3`
 

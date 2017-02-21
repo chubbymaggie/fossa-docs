@@ -1,6 +1,4 @@
-# Golang
-
-FOSSA support for Golang is in **Alpha**.
+# Golang (**Alpha**)
 
 ## Configuration
 

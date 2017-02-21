@@ -2,10 +2,8 @@
 
 FOSSA supports Python projects through 2 package managers:
 
-- `setuptools`
-- `pip`
-
-FOSSA support for Python is in **Alpha**.
+- `setuptools` (Alpha)
+- `pip` (Alpha)
 
 ## Configuration
 
