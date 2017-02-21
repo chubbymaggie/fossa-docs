@@ -16,7 +16,7 @@ Project settings config is accessible and editable from the projects page (http:
 
 The environment variables used during project build is configurable via **Project Settings > Builds and Languages > General**.
 
-![General Language and Build Settings](/img/language-settings-general.png)
+![General Language and Build Settings](/img/project-settings-language-settings-general.png)
 
 ## Cargo
 
