@@ -29,3 +29,7 @@
 4. How can I generate reports in Fossa?
 
   Navigate to **Project Summary > Generate Report**. You can download reports in various formats (Markdown, HTML, PDF) and generate a publically accessible link.
+
+5. Why isn't FOSSA loading in my browser?
+
+  We recommend using FOSSA with the latest version of [Google Chrome](https://www.google.com/chrome/), however FOSSA works with Internet Explorer (> IE9), Microsoft Edge, Firefox, and any other modern browser.
