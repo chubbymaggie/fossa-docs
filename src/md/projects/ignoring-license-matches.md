@@ -3,7 +3,7 @@
 By default, FOSSA will ignore all files that match the following directories:
 
 - Version Control/Devtool Folders: `.git/`, `.srclib-cache/` 
-- Package Dependency Folders: `node_modules/`, `bower_components`, `Godeps/` (Contact support if you use vendorized dependencies)
+- Package Dependency & Vendor Folders: `node_modules/`, `bower_components`, `Godeps/`, `vendor/` (Contact support if you use vendorized dependencies)
 - Test Folders: `test/`, `tests/`, `_test/`, `spec/`
 - Object and Compiled Folders: `_obj`
 - Examples and Documentation: `docs/`, `documentation/`, `examples/`, `example/`
