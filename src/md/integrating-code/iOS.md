@@ -18,12 +18,17 @@ Fossa derives dependencies by analyzing your Podfile/Podfile.lock files and seei
 
 FOSSA allows you to add your own podspec repos as well. This is done via the [Language Settings](/account/settings/languages) page under `Cocoapods Settings`. The url should be of the form: `git@github.com:artsy/eigen.git`.
 
+![Cocoapods Add Spec Repo](/img/cocoapods-add.png)
+
 ### Authentication
 
-Before adding a repo that requires authentication, you must add the following public key to your projects settings:
+Before adding a repo that requires authentication, you must add the following public key to your github settings:
 
 > ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvWCpvoCLbHt6+VfYhK1gHpWnDegn7xGLLJ3sdg/crdBjXIRkWQ5ABpoJ8OohMY6ulGzhdCA3jh9jShTfcd6etotyVC2+troKbJ8Jpn8rFaMR6df5ij7TSakHV1pAKijLpaFcRdLQQE2hoTqkIQCwLBevWKkM4hAiZky/cI62cg+AaM+8cjpih0Ok3t7fgtY7ei2AGXKBS4zHg/YYl9rSQ1tWBV605K25tGvsmTdtddvaTIGqV5svGea7+txvJFo4NW6YI9U99EkeFMkkz9IF6nK5kPlElledAqtD05Ui3WSbOEQNvesetPJc+PwUiCSLjsMGYjO2PM5V5tw8orNW5vQKZlt2IaZ5ZDHLIz9KI5R/Y61jPkaCOcHBErSD5oWX018vqmi9/5xyM6jeyy7XK193929smc+OeF79p2zaIOVEiVnTDcvu/8DIFvrCiQiU7NNFkey7Umawy5QvYnJcdU+p9cuk6s63jheyfczYQZtTEb6q/VgwfC3RXm7t3/h/mV6XvCRoORLm5ViD21DDdyWAnMXzJ9EPfvxnkM2SuUoMhEdITWIUkbDv8sK1g9F6kLoaeC8kYrGe0RiyJMbLJ8IxK6Pa6Ztohs7xIoHdGDfhFr1DoNkuYC+VMpp8SLAOeOsh0J8DVa8af0MrdK0+N85y0MPt9yFkTiAT1l7ayPw==
 
+This is done via the Project Settings deploy key section in your github project:
+
+![Github Deploy Key](/img/github-publickey.png)
 
 ## Carthage (Alpha)
 
