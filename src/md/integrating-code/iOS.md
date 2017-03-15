@@ -16,7 +16,7 @@ Fossa derives dependencies by analyzing your Podfile/Podfile.lock files and seei
 
 ### Configuring podspec repos
 
-FOSSA allows you to add your own podspec repos as well. This is done via the [Language Settings](/account/settings/languages) page under `Cocoapods Settings`. The url should be of the form: `git@github.com:artsy/eigen.git`.
+FOSSA allows you to add your own podspec repos as well. This is done via the [Language Settings](/account/settings/languages) page under `Cocoapods Settings`. The url should be of the form: `https://github.com/artsy/Specs` for public repos, and `git@github.com:artsy/Specs.git` for private repos.
 
 ![Cocoapods Add Spec Repo](/img/cocoapods-add.png)
 
