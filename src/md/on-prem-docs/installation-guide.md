@@ -68,7 +68,6 @@ sudo sysctl -p /etc/sysctl.conf
 
 service docker restart
 ```
-​
 ### 2. Set up the Postgres database
 
 In the machine that's running postgres (could be the same), run the following:

@@ -40,6 +40,16 @@
           clear: right;
         }
 
+        blockquote {
+          margin: 0;
+          padding: 0;
+
+          p {
+            margin:0;
+            padding: 0 1rem;
+          }
+        }
+
         p, pre {
           display: block;
           margin: 0 0 @leading 0;
@@ -96,18 +106,21 @@
       line-height: 1.5 * @scale * @baseFontSize;
     }
     h3 {
-      font-size: 1.1 * @scale * @baseFontSize;
+      font-size: 1.25 * @scale * @baseFontSize;
       font-weight: bold;
-      line-height: 1.1 * @scale * @baseFontSize;
+      line-height: 1.25 * @scale * @baseFontSize;
+    }
+    h3.active {
+      color: @accentPrimary;
     }
     h4 {
-      font-size: @scale / 2 * @baseFontSize;
+      font-size: @scale * @baseFontSize;
     }
     h5 {
-      font-size: @scale / 3 * @baseFontSize;
+      font-size: @scale / 2 * @baseFontSize;
     }
     h6 {
-      font-size: @scale / 4 * @baseFontSize;
+      font-size: @scale / 3 * @baseFontSize;
     }
   }
 }
@@ -151,20 +164,21 @@
       line-height: 1.5 * @scale * @baseFontSize;
     }
     h3 {
-      font-size: 1.1 * @scale * @baseFontSize;
+      font-size: 1.25 * @scale * @baseFontSize;
       font-weight: bold;
+      line-height: 1.25 * @scale * @baseFontSize;
     }
     h3.active {
       color: @accentPrimary;
     }
     h4 {
-      font-size: @scale / 2 * @baseFontSize;
+      font-size: @scale * @baseFontSize;
     }
     h5 {
-      font-size: @scale / 3 * @baseFontSize;
+      font-size: @scale / 2 * @baseFontSize;
     }
     h6 {
-      font-size: @scale / 4 * @baseFontSize;
+      font-size: @scale / 3 * @baseFontSize;
     }
   }
 
@@ -203,17 +217,21 @@
       line-height: 1.5 * @scale * @baseFontSize;
     }
     h3 {
-      font-size: @scale * @baseFontSize;
+      font-size: 1.25 * @scale * @baseFontSize;
       font-weight: bold;
+      line-height: 1.25 * @scale * @baseFontSize;
+    }
+    h3.active {
+      color: @accentPrimary;
     }
     h4 {
-      font-size: @scale / 2 * @baseFontSize;
+      font-size: @scale * @baseFontSize;
     }
     h5 {
-      font-size: @scale / 3 * @baseFontSize;
+      font-size: @scale / 2 * @baseFontSize;
     }
     h6 {
-      font-size: @scale / 4 * @baseFontSize;
+      font-size: @scale / 3 * @baseFontSize;
     }
 
     .active {
