@@ -12,17 +12,17 @@ We look for and analyze the following files for license and dependency informati
 
 FOSSA will find any package available on [www.nuget.org/packages](http://www.nuget.org/packages) 
 
-We currently use the [NuGet API v3](https://docs.microsoft.com/en-us/nuget/api/nuget-api-v3) to fetch metadata and package information
+We currently use the [NuGet API v3](https://docs.microsoft.com/en-us/nuget/api/nuget-api-v3) to fetch metadata and package information.
 
 ## License files
 
-If a license file is given as a URL (in a `.nuspec` file via the `licenseUrl` property) FOSSA will attempt to go out and retrieve the license file and add to the project root. These will be labeled as `LICENSE_<license-name>.txt` when viewing license matches inside FOSSA
+If a license file is given as a URL (in a `.nuspec` file via the `licenseUrl` property) FOSSA will attempt to go out and retrieve the license file and add to the project root. These will be labeled as `LICENSE_<license-name>.txt` when viewing license matches inside FOSSA.
 
 ## Dependency Resolution
 
-If an exact version is not given (i.e. a version range), FOSSA will resolve a dependency to the highest patch version (using the `major.minor.patch.build` convention) 
+If an exact version is not given (i.e. a version range), FOSSA will resolve a dependency to the highest patch version (using the `major.minor.patch.build` convention) .
 
-Documentation on versioning: [Version range spec](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions)
+Documentation on versioning: [Version range spec](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
 
 
 ## Limitations

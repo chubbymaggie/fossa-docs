@@ -4,7 +4,7 @@ Fossa supports Swift and Objective-C Cocoa projects with both CocoaPods and Cart
 
 ## CocoaPods (Alpha)
 
-Fossa is using CocoaPods Version ~1.0. If your Podfile is built using an earlier version, there is a chance that it may not build correctly. To upgrade [See doc](http://blog.cocoapods.org/CocoaPods-1.0/)
+Fossa is using CocoaPods Version ~1.0. If your Podfile is built using an earlier version, there is a chance that it may not build correctly. To upgrade [See doc](http://blog.cocoapods.org/CocoaPods-1.0/).
 
 The CocoaPods [build system](https://cocoapods.org/) pulls in dependencies based on:
 

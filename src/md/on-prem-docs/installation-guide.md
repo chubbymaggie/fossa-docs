@@ -17,7 +17,7 @@ Execute the following command and follow the prompt on the screen:
 
 ```bash
 # Download and run the environment setup script
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.10.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && sudo ~/fossa/setup.sh
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.11.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && sudo ~/fossa/setup.sh
 ```
 
 This script should walk you through setting up your environment and configuring FOSSA for first-time boot, creating a root directory at `{HOME}/fossa` and a CLI you can run using `fossa {command}`.  
@@ -76,10 +76,12 @@ In the machine that's running postgres (could be the same), run the following:
 mkdir -p ~/pg_fossa && curl -L https://github.com/fossas/pg_fossa/archive/v1.1.tar.gz | tar -zxv -C ~/pg_fossa --strip-components=1 && sudo cp -R ~/pg_fossa/* $( pg_config | grep SHAREDIR | awk '{print $3}' )/extension/
 
 sudo -u postgres psql -c "CREATE DATABASE fossa"
+sudo -u postgres psql -c "CREATE DATABASE rubygems"
 
 # replace the default 'fossa123' password with what you have in config.env
 sudo -u postgres psql -c "CREATE USER fossa WITH PASSWORD 'fossa123';"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE fossa TO fossa;"
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE rubygems TO fossa;"
 
 # Install trigram extension
 sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS pg_trgm"
@@ -128,7 +130,7 @@ As part of the installer, you will be prompted for a `username, password and ema
 
 ```bash
 # Download and run the installer
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.10.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.11.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
 
 # Configure FOSSA first-time
 vi ~/fossa/config.env

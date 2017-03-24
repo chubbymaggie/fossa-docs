@@ -18,7 +18,7 @@ FOSSA follows the behavior of `go build` and `go get` to discover and resolve de
 
 ### Discovery
 
-FOSSA discovers dependencies by graphing the import statements traversed by a build of entry point modules, similar to `go build`.  Currently, all build paths and entry points are concatenated to calculate the dependency requirements of a repository.  Although FOSSA can distinguish between different modules or build targets in a repo, you must currently use a `.fossaconfig` file to ignore modules you want to exclude.
+FOSSA discovers dependencies by graphing the import statements traversed by a build of entry point modules, similar to `go build`. Currently, all build paths and entry points are concatenated to calculate the dependency requirements of a repository. Although FOSSA can distinguish between different modules or build targets in a repo, you must currently use a `.fossaconfig` file to ignore modules you want to exclude.
 
 `go get` is capable of downloading dependencies from 4 types of Version Control Systems (VCS):
 

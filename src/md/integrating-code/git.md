@@ -6,7 +6,7 @@ FOSSA is able to resolve all Git objects that are accessible via `git checkout`,
 
 ## Branches & Tags
 
-FOSSA is aware of all branches and tags in a git project
+FOSSA is aware of all branches and tags in a git project.
 
 By default, FOSSA will only track your **Default Branch** for per-commit updates/analysis.  You can track an unlimited number of branches/tags if you need to, for instance, track multiple releases on multiple targets/platforms. 
 
