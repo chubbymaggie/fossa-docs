@@ -124,6 +124,10 @@ Once FOSSA is running, `{FOSSA_HOST}/docs/integrations/jira-issue-tracker` will 
 
 TBA
 
+#### Cocoapods API:
+
+Make sure that you have the fossa-cocoapods-api container IP mapped to what is listed as your `cocoapods_api__hostname` config in `config.env`. The Cocoapods-api migration will create a public/private key pair if one does not exist on your host machine at `/root/.ssh/id_rsa'.
+
 ### 4. Run the FOSSA installer
 
 As part of the installer, you will be prompted for a `username, password and email`.  Contact `support@fossa.io` if you haven't already been given those credentials.

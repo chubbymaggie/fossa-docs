@@ -30,6 +30,8 @@ This is done via the Project Settings deploy key section in your github project:
 
 ![Github Deploy Key](/img/github-publickey.png)
 
+On-prem users will need to get their public key from the host server (if one doesn't exist, the Cocoapods migration will create a key pair)
+
 ## Carthage (Alpha)
 
 Fossa scans through your Project and analyzes any Cartfile that is found. Cartfile.private and Cartfile.resolved files are ignored. It grabs dependencies based on:
