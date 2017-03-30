@@ -17,7 +17,7 @@ Execute the following command and follow the prompt on the screen:
 
 ```bash
 # Download and run the environment setup script
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.11.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && pushd fossa && sudo ~/fossa/setup.sh && popd
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.12.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && pushd fossa && sudo ~/fossa/setup.sh && popd
 ```
 
 This script should walk you through setting up your environment and configuring FOSSA for first-time boot, creating a root directory at `{HOME}/fossa` and a CLI you can run using `fossa {command}`.  
@@ -134,7 +134,7 @@ As part of the installer, you will be prompted for a `username, password and ema
 
 ```bash
 # Download and run the installer
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.11.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.12.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
 
 # Configure FOSSA first-time
 vi ~/fossa/config.env
