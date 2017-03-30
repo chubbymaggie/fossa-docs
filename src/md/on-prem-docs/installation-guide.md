@@ -79,7 +79,7 @@ sudo -u postgres psql -c "CREATE DATABASE fossa"
 sudo -u postgres psql -c "CREATE DATABASE rubygems"
 
 # replace the default 'fossa123' password with what you have in config.env
-sudo -u postgres psql -c "CREATE USER fossa WITH PASSWORD 'fossa123';"
+sudo -u postgres psql -c "CREATE USER fossa WITH PASSWORD 'fossa123' WITH CREATEUSER;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE fossa TO fossa;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE rubygems TO fossa;"
 
