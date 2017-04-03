@@ -6,7 +6,7 @@ This guide is for you to set up the FOSSA app in your Slack channel(s).
 
 You first need to authorize FOSSA to access your Slack team.
 
-1. Navigate to FOSSA [Organization Settings](/account/settings/organization).
+1. Navigate to FOSSA [Integration Settings](/account/settings/integrations).
 
 2. Connect to Slack
 

@@ -50,7 +50,7 @@ FOSSA requires webhooks to sync ticket/issue status with JIRA.  This means that 
 
 ## Configure FOSSA with JIRA
 
-1. Fill in JIRA settings under **Account Settings > Organization**
+1. Fill in JIRA settings under **Account Settings > Integrations**
 
 	![JIRA Configure Webhook](/img/jira-fossa-settings.png)
 
