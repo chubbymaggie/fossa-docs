@@ -47,3 +47,17 @@ data/
 ```
 
 Read about `.gitignore` files [here](http://git-scm.com/docs/gitignore).
+
+## The `FOSSA_LICENSE_IGNORE` environment variable
+
+In order to add batch file ignores through the FOSSA UI without pushing a `.fossaignore` file to your repo, you can pass in an environment variable named `FOSSA_LICENSE_IGNORE` in your project build settings.
+
+In this variable, you can define equivalent glob patterns to the `.fossaignore` file separated by spaces.  For instance setting:
+
+`FOSSA_LICENSE_IGNORE` = `*.json **.pem bin/`
+
+will ignore all JSON files in the root directory, private keys anywhere in the repo, and the `bin` folder.
+
+You can disable license scanning across your root repository in total by setting `FOSSA_LICENSE_IGNORE` to `**` for a drastic speed-up in build times.
+
+
