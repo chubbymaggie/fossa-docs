@@ -10,7 +10,7 @@ FOSSA will find any package available on [https://packagist.org/](https://packag
 
 ## License files
 
-License files will be declared by looking at the `license` field in the composer.json file.
+License files will be declared by looking at the `license` field in the composer.json file or any other source code related to the package.
 
 ## Dependency Resolution
 
@@ -21,7 +21,7 @@ Documentation on versioning: [Version spec](https://getcomposer.org/doc/articles
 
 ## Limitations
 
- - We do not currently look at `composer.lock` files
+ - We do not elect versions based on the `composer.lock` file.
  - If branches (`dev-`, or `.x-dev`) are used within a version constraint (not given explicitly), resolving may not work
  - We currently ignore stability tags (`@dev, @stable`, etc.)
  - We ignore php and php extensions when inside the `require` key of `composer.json`
