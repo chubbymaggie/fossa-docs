@@ -8,18 +8,18 @@ We look for and analyze files named `composer.json`
 
 FOSSA will find any package available on [https://packagist.org/](https://packagist.org/) 
 
-## License files
+### License files
 
 License files will be declared by looking at the `license` field in the composer.json file or any other source code related to the package.
 
-## Dependency Resolution
+### Dependency Resolution
 
 If an exact version is not given (i.e. a version range), FOSSA will resolve a dependency to the highest version satisfying the constraint.
 
 Documentation on versioning: [Version spec](https://getcomposer.org/doc/articles/versions.md).
 
 
-## Limitations
+### Limitations
 
  - We do not elect versions based on the `composer.lock` file.
  - If branches (`dev-`, or `.x-dev`) are used within a version constraint (not given explicitly), resolving may not work
