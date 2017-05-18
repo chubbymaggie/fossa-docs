@@ -25,4 +25,4 @@ Documentation on versioning: [Version spec](https://getcomposer.org/doc/articles
  - If branches (`dev-`, or `.x-dev`) are used within a version constraint (not given explicitly), resolving may not work
  - We currently ignore stability tags (`@dev, @stable`, etc.)
  - We ignore php and php extensions when inside the `require` key of `composer.json`
- - We only look at `require` for dependencies. dev dependencies will be ignored
+ - We only look at `require` for dependencies. dev dependencies will be ignored (`require-dev`, `repositories`, `replace` will be ignored)
