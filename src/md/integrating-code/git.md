@@ -10,7 +10,7 @@ FOSSA is aware of all branches and tags in a git project.
 
 By default, FOSSA will only track your **Default Branch** for per-commit updates/analysis.  You can track an unlimited number of branches/tags if you need to, for instance, track multiple releases on multiple targets/platforms. 
 
-Automatic updates in FOSSA are triggered via webhooks, which are automatically set up via GitHub or Bitbucket, but may also be configured to work with post-receive hooks.
+Automatic updates in FOSSA are triggered via webhooks, which are automatically set up via GitHub, Gitlab or Bitbucket, but may also be configured to work with post-receive hooks.
 
 ## Pull Requests and Git-Based Workflows
 

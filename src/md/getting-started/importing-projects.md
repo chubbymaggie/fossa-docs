@@ -2,9 +2,11 @@
 
 You can add a project to FOSSA in a few ways **Dashboard > Add Project**:
 
-- Github 
+- Github
 - Github Enterprise (on-prem only, requires config)
+- Bitbucket Cloud
 - Bitbucket Server (on-prem only, requires config)
+- Gitlab
 - Manually via URL (on-prem only, for any supported VCS or package registry)
 
 By default, FOSSA will automatically set up automatic updates, code review integrations and more if you use a service (non-manual) import method:
@@ -30,13 +32,13 @@ As long as FOSSA can reach your code, it will download and scan all of it for li
 - [*iOS (CocoaPods - **Alpha***, Carthage - **Alpha**)](../integrating-code/iOS)
 - [*Golang **Alpha***](../integrating-code/go)
 - [*Rust (Cargo) **Alpha***](../integrating-code/rust)
+- [*PHP (Composer) **Alpha***](../integrating-code/php)
 
 Coming Soon:
 
 - Java (Ant)
 - Scala (Sbt)
 - Haskell
-- PHP (Composer)
 
 Every month we're actively adding more integrations!  For unsupported environments, FOSSA will still run for your repository -- however it may either miss some dependency data or have trouble organizing information in the UI.
 
