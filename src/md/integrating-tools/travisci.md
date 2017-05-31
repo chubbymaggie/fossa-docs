@@ -4,13 +4,23 @@ This guide is for you to set up the FOSSA app in your CI workflow. We offer two 
 
 ## TravisCI Build Step
 
-We have provided a script that you may run as a custom build step that checks for the build and issues scan status of the FOSSA project. This is available [Here](https://github.com/fossas/fossa-travisci-plugin).
+We have built a CLI tool available [Here](https://www.npmjs.com/package/license-cli)
+
+This will require nodejs and npm to be available on the build machine.
 
 In order for this to work, you will also have generate a FOSSA API token. This can be found in [Integration Settings](/account/settings/integrations):
 
 ![API Token](/img/api-token-creation.png)
 
-Once this is generated, you will have to add this as an environment variable named `FOSSA_API_TOKEN` in your TravisCI build. After that, you are all set up!
+A sample build step for Travis CI:
+
+```
+before_script:
+		- npm install -g license-cli
+		- cd <PROJECT_DIR>
+		- license-cli auth <FOSSA_API_TOKEN>
+		- license-cli scan -r $TRAVIS_COMMIT
+```
 
 
 ## Post-build Webhook

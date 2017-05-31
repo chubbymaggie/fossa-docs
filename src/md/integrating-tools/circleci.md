@@ -4,14 +4,25 @@ This guide is for you to set up the FOSSA app in your CI workflow. We offer two 
 
 ## CircleCI Build Step
 
-We have provided a script that you may run as a custom build step that checks for the build and issues scan status of the FOSSA project. This is available [Here](https://github.com/fossas/fossa-circleci-plugin).
+We have built a CLI tool available [Here](https://www.npmjs.com/package/license-cli)
+
+This will require nodejs and npm to be available on the build machine.
 
 In order for this to work, you will also have generate a FOSSA API token. This can be found in [Integration Settings](/account/settings/integrations):
 
 ![API Token](/img/api-token-creation.png)
 
-Once this is generated, you will have to add this as an environment variable named `FOSSA_API_TOKEN` in your CircleCI build. After that, you are all set up!
+A sample build step for Circle CI 2.0:
 
+```
+- checkout
+- run:
+    command: |
+      license-cli auth <FOSSA_API_TOKEN>
+      license-cli scan -r $CIRCLE_SHA1
+    no_output_timeout: '45m'
+    name: 'Check FOSSA Build/Scan'
+```
 
 ## Post-build Webhook
 
@@ -20,7 +31,7 @@ Another way to integrate FOSSA into your workflow is to set up a webhook notific
 ```
 notify:
   webhooks:
-    - url: http://4e7e5833.ngrok.io/hooks/circleci
+    - url: http://app.fossa.io/hooks/circleci
 ```
 
 You will also have to update your project settings in FOSSA by navigating to `Project > Settings > Update Hooks`, and selecting CircleCI in the dropdown.
