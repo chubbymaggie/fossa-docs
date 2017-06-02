@@ -12,11 +12,11 @@ FOSSA uses the Oauth API's for each of these services in order to import, which 
 
 To import from your github, FOSSA requires the following permissions:
 
-- `repo` (to access your code)
-- `user` (to access basic user info)
-- `write:repo_hook` (to create update hooks)
-- `read:org` (to access basic organization info)
-- `admin:org_hook` (to create update hooks on your organization)
+- `repo`
+- `user`
+- `write:repo_hook`
+- `read:org`
+- `admin:org_hook`
 
 ![Github scopes](/img/github-scopes.png "Github scopes")
 
