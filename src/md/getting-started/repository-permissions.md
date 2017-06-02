@@ -56,7 +56,7 @@ For more information on these permissions, view the [Bitbucket docs](https://dev
 
 To import from your github, FOSSA requires the following permissions:
 
-- `api` (to access your code)
+- `api`
 
 ![Gitlab scopes](/img/gitlab-scopes.png "Gitlab scopes")
 
