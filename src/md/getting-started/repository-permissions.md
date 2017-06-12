@@ -10,6 +10,17 @@ FOSSA uses the Oauth API's for each of these services in order to import, which 
 
 ## Github permissions
 
+### Cloud
+
+To import a project from your user/organization, FOSSA will need 
+
+- Read access to code
+- Read access to metadata and pull requests
+- Read and write access to commit statuses, issues, and the `.fossaignore` file
+
+![Github Apps scopes](/img/github-apps-scopes.png "Github apps scopes")
+
+### On-prem
 To import from your github, FOSSA requires the following permissions:
 
 - `repo`
