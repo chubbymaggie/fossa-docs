@@ -1,6 +1,6 @@
 # CircleCI Integration
 
-This guide is for you to set up the FOSSA app in your CI workflow. We offer two ways currently for you to integrate FOSSA into your workflow, through a `CircleCI Build Step`, or a `Post-build Webhook`.
+This guide is for you to set up the FOSSA app in your CI workflow. We offer two ways currently for you to integrate FOSSA into your workflow, through a `CircleCI Build Step`, or a `CircleCI Post-build Webhook`.
 
 ## CircleCI Build Step
 
@@ -24,7 +24,7 @@ A sample build step for Circle CI 2.0:
     name: 'Check FOSSA Build/Scan'
 ```
 
-## Post-build Webhook
+## CircleCI Post-build Webhook
 
 Another way to integrate FOSSA into your workflow is to set up a webhook notification in CircleCI. To do this, you will have to add the following to your circle.yml file:
 
