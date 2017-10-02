@@ -17,7 +17,7 @@ Execute the following command and follow the prompt on the screen:
 
 ```bash
 # Download and run the environment setup script
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.12.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && pushd fossa && sudo ~/fossa/setup.sh && popd
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.13.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && pushd fossa && sudo ~/fossa/setup.sh && popd
 ```
 
 This script should walk you through setting up your environment and configuring FOSSA for first-time boot, creating a root directory at `{HOME}/fossa` and a CLI you can run using `fossa {command}`.  
@@ -57,7 +57,7 @@ apt-get install -y docker-engine postgresql-9.3 postgresql-contrib-9.3 postgresq
 usermod -aG docker ubuntu
 
 # Edit docker config to use "devicemapper" over "aufs" due to issues with aufs on Ubuntu
-echo "DOCKER_OPTS=\"--storage-driver=devicemapper\" --storage-opt dm.basesize=20G" >> /etc/default/docker
+grep -Fq "DOCKER_OPTS=\"--storage-driver=devicemapper --storage-opt dm.basesize=20G\"" < /etc/default/docker || ( touch /etc/default/docker ; echo "DOCKER_OPTS=\"--storage-driver=devicemapper --storage-opt dm.basesize=20G\"" >> /etc/default/docker )
 
 # Configure forwarding
 sudo ufw disable
@@ -73,21 +73,24 @@ service docker restart
 In the machine that's running postgres (could be the same), run the following:
 
 ```bash
-mkdir -p ~/pg_fossa && curl -L https://github.com/fossas/pg_fossa/archive/v1.1.tar.gz | tar -zxv -C ~/pg_fossa --strip-components=1 && sudo cp -R ~/pg_fossa/* $( pg_config | grep SHAREDIR | awk '{print $3}' )/extension/
+mkdir -p ~/pg_fossa && curl -L https://github.com/fossas/pg_fossa/archive/v1.4.tar.gz | tar -zxv -C ~/pg_fossa --strip-components=1 && sudo cp -R ~/pg_fossa/* $( pg_config | grep SHAREDIR | awk '{print $3}' )/extension/
 
 sudo -u postgres psql -c "CREATE DATABASE fossa"
 sudo -u postgres psql -c "CREATE DATABASE rubygems"
 
 # replace the default 'fossa123' password with what you have in config.env
-sudo -u postgres psql -c "CREATE USER fossa WITH PASSWORD 'fossa123' WITH CREATEUSER;"
+sudo -u postgres psql -c "CREATE USER fossa WITH PASSWORD 'fossa123';"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE fossa TO fossa;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE rubygems TO fossa;"
 
 # Install trigram extension
-sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS pg_trgm"
+sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS pg_trgm;"
+
+# Install fuzzystrmatch extension
+sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS fuzzystrmatch;"
 
 # Install pg_fossa extension
-sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS pg_fossa"
+sudo -u postgres psql fossa -c "CREATE EXTENSION IF NOT EXISTS pg_fossa;"
 
 # In the file below, find the IPv4 host configuration and make sure it looks like this:
 # host    all             all             0.0.0.0/0            md5
@@ -134,7 +137,7 @@ As part of the installer, you will be prompted for a `username, password and ema
 
 ```bash
 # Download and run the installer
-mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.12.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
+mkdir -p ~/fossa && curl -L https://github.com/fossas/fossa-installer/archive/v0.0.13.tar.gz | tar -zxv -C ~/fossa --strip-components=1 && chmod a+x ~/fossa/boot.sh && sudo ln -sf ~/fossa/boot.sh /usr/local/bin/fossa && fossa init
 
 # Configure FOSSA first-time
 vi ~/fossa/config.env

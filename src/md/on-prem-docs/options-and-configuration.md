@@ -18,8 +18,18 @@ These are environment variables you can pass when booting the FOSSA instance to 
 
 Postgres connection info
 
-`db__database` - default to postgres 
 `db__host`
+`db__port`
+`db__username`
+`db__password`
+`db__database` - defaults to fossa
+
+`db_rubygems__enabled`
+`db_rubygems__host`
+`db_rubygems__port`
+`db_rubygems__username`
+`db_rubygems__password`
+`db_rubygems__database` - defaults to rubygems
 
 ## Advanced
 
@@ -108,6 +118,13 @@ Postgres connection info
 `fetchers__npm__auth__username`
 
 ## Maven/Gradle
+
+## Cocoapods
+
+`cocoapods_api__enabled`
+`cocoapods_api__protocol`
+`cocoapods_api__hostname` - defaults to localhost
+`cocoapods_api__port`
 
 ### Repository/Server Configuration
 
