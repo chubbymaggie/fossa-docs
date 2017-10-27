@@ -1,10 +1,12 @@
-# Java
+# Java and Scala
 
 Fossa supports Java and 2 of the 3 main build systems:
 
 1. Maven (Supported)
 2. Gradle (Supported)
 3. Ant (Not Supported)
+
+Fossa also supports sbt when using the Maven-compatible layout (default).
 
 ## Configuration
 
@@ -74,6 +76,10 @@ The metadata pulled in is similar to maven:
   - Resolved version
   - Transitive excludes
   - Scopes
+  
+## Scala
+
+The Scala build tool (http://www.scala-sbt.org/) pulls in dependencies from several kinds of repositories.  FOSSA can scan them if they are published in the Maven-compatible file layout (default).  FOSSA does not yet support artifacts in the ivy file layout.
 
 ### Properties
 
