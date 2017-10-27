@@ -58,6 +58,10 @@ Optional dependencies are included in analysis and are grok'ed by Fossa. The opt
 
 Dependencies that are excluded transitively are also grok'ed by Fossa. If a transitive dependency is expicitly excluded, Fossa will exclude that dependency from its issue scans and in the UI. If another dependency brings in the excluded transitive dependency, then it will be included. These excludes are scoped to dependencies, not projects.
 
+## Scala
+
+The Scala build tool (http://www.scala-sbt.org/) pulls in dependencies from several kinds of repositories.  FOSSA can scan them if they are published in the Maven-compatible file layout (default).  FOSSA does not yet support artifacts in the Ivy file layout.
+
 ## Gradle
 
 The Gradle build system (https://docs.gradle.org/) pulls in dependencies based on the repository it's pulling from:
@@ -76,10 +80,6 @@ The metadata pulled in is similar to maven:
   - Resolved version
   - Transitive excludes
   - Scopes
-  
-## Scala
-
-The Scala build tool (http://www.scala-sbt.org/) pulls in dependencies from several kinds of repositories.  FOSSA can scan them if they are published in the Maven-compatible file layout (default).  FOSSA does not yet support artifacts in the Ivy file layout.
 
 ### Properties
 
