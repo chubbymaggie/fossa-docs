@@ -50,11 +50,11 @@ FOSSA currently requires a companion bot account on your **Bitbucket Server** in
 
   ![](/img/stash-create-user.png)
 
-	For username/password, use the `bitbucket__credentials` config in FOSSA's `config.env` (default below):
+	For username/password, use the `bitbucket_server__credentials` config in FOSSA's `config.env` (default below):
 
 	```bash
-	bitbucket__credentials__basic__username=fossabot
-	bitbucket__credentials__basic__password=fossa123
+	bitbucket_server__credentials__basic__username=fossabot
+	bitbucket_server__credentials__basic__password=fossa123
 	```
 
 2. Ensure `fossabot` has global read access
