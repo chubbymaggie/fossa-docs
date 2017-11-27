@@ -67,17 +67,17 @@ Postgres connection info
 `github__timeout`
 `github__headers__{header_name}`
 
-## Bitbucket/Stash 
+## Bitbucket Server/Stash 
 
-`bitbucket__enabled`
-`bitbucket__base_url`
+`bitbucket_server__enabled`
+`bitbucket_server__base_url`
 
-`bitbucket__credentials__oauth2__client_id`
-`bitbucket__credentials__oauth2__client_secret`
-`bitbucket__credentials__oauth2__private_key`
+`bitbucket_server__credentials__oauth2__client_id`
+`bitbucket_server__credentials__oauth2__client_secret`
+`bitbucket_server__credentials__oauth2__private_key`
 
-`bitbucket__credentials__basic__username`
-`bitbucket__credentials__basic__password`
+`bitbucket_server__credentials__basic__username`
+`bitbucket_server__credentials__basic__password`
 
 ## JIRA
 
