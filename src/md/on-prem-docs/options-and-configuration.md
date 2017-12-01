@@ -40,8 +40,7 @@ Postgres connection info
 
 `app__server__type` - defaults to http
 
-`app__server__key`
-
+`app__server__key` - note, these refer to paths mounted in the container.  Deploy to certs on the host machine to `/fossa/public/data/crt.key` and configure FOSSA with `/fossa/public/data/crt.key`
 `app__server__cert`
 
 ## Misc

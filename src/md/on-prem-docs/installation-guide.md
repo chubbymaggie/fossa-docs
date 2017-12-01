@@ -104,7 +104,40 @@ sudo service postgresql restart
 
 If you have a separate postgres instance, make sure you add those connection details to `config.env`.
 
-### 3. (Optional) Prepare Integrations
+### 3. (Optional) Configure HTTPS
+
+If you require SSL/TLS support, you can enable this by passing certificates to the FOSSA appliance.
+
+1. Provision valid SSL certificate and keyfiles that are verified on the host machine
+
+2. Move your new keyfile to `/var/data/fossa/server.key` and certificate file to `/var/data/fossa/server.crt` on the host machine
+
+3. Configure FOSSA for https
+
+Update the server settings at the top of your `config.env` file to read:
+
+```bash
+# change this from http to https
+app__server__type=https
+app__server__key=/fossa/public/data/server.key
+app__server__cert=/fossa/public/data/server.crt
+```
+
+NOTE: When FOSSA runs, `/var/data/fossa` on the host machine is mounted to `/fossa/public/data` within the FOSSA appliance.  Therefore if you ever change the path or filenames to your certificates, make sure you store them in a subfolder of `/var/data/fossa` on your host and properly translate the root paths to `/fossa/public/data/...` in your config.
+
+4. Run `fossa restart`
+
+(Optional) - If you'd like to funnel all FOSSA traffic through a secured channel (i.e. enforce https or hostname), you ask the FOSSA applicance to redirect all traffic it recevies to its base configuration (protocol/host/port).
+
+```bash
+# example to direct port 80 traffic to configured port
+app__redirect_server__enabled=true
+app__redirect_server__port=80
+```
+
+Depending on your network configuration, this may add extra complexity and render FOSSA unreachable under certain conditions, so only configure this if you deeply understand your internal network.
+
+### 4. (Optional) Prepare Integrations
 
 #### Bitbucket/Stash:
 
@@ -123,9 +156,9 @@ To run the Atlassian JIRA setup, make sure you create a `fossabot` account with 
 
 Once FOSSA is running, `{FOSSA_HOST}/docs/integrations/jira-issue-tracker` will have futher instructions on setup.
 
-#### Github: 
+#### Github & Gitlab: 
 
-TBA
+Please refer to our integration guides in the navigation.
 
 #### Cocoapods API:
 
