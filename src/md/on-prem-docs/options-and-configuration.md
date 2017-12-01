@@ -6,7 +6,7 @@ These are environment variables you can pass when booting the FOSSA instance to 
 
 ## Basic Params
 
-`secret` - unique 64 digit string used to protect data throughout your app
+`secret` - unique 64-character HEX string used to protect data throughout your app
 
 `app__hostname` - hostname, defaults to localhost
 
