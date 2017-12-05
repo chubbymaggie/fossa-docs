@@ -110,7 +110,7 @@ If you require SSL/TLS support, you can enable this by passing certificates to t
 
 1. Provision valid SSL certificate and keyfiles that are verified on the host machine
 
-2. Move your new keyfile to `/var/data/fossa/server.key` and certificate file to `/var/data/fossa/server.crt` on the host machine
+2. Move your new keyfile to `/var/data/fossa/server.key` certificate file to `/var/data/fossa/server.crt`, and if applicable your certificate authority file `/var/data/fossa/server.ca` on the host machine
 
 3. Configure FOSSA for https
 
@@ -121,6 +121,7 @@ Update the server settings at the top of your `config.env` file to read:
 app__server__type=https
 app__server__key=/fossa/public/data/server.key
 app__server__cert=/fossa/public/data/server.crt
+app__server__ca=/fossa/public/data/server.ca
 ```
 
 NOTE: When FOSSA runs, `/var/data/fossa` on the host machine is mounted to `/fossa/public/data` within the FOSSA appliance.  Therefore if you ever change the path or filenames to your certificates, make sure you store them in a subfolder of `/var/data/fossa` on your host and properly translate the root paths to `/fossa/public/data/...` in your config.
