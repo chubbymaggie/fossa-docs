@@ -34,7 +34,7 @@ You first need to add an application link so that users with a login on Bitbucke
 
 	```bash
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqGKukO1De7zhZj6+H0qtjTkVxwTCpvKe4eCZ0FPqri0cb2JZfXJ/DgYSF6vUpwmJG8wVQZKjeGcjDOL5UlsuusFncCzWBQ7RKNUSesmQRMSGkVb1/3j+skZ6UtW+5u09lHNsj6tQ51s1SPrCBkedbNf0Tp0GbMJDyR4e9T04ZZwIDAQAB
-```
+	```
 
 Now users can successfully connect their Bitbucket Server accounts with FOSSA.
 
@@ -50,12 +50,12 @@ FOSSA currently requires a companion bot account on your **Bitbucket Server** in
 
   ![](/img/stash-create-user.png)
 
-	For username/password, use the `bitbucket_server__credentials` config in FOSSA's `config.env` (default below):
+For username/password, use the `bitbucket_server__credentials` config in FOSSA's `config.env` (default below):
 
-	```bash
-	bitbucket_server__credentials__basic__username=fossabot
-	bitbucket_server__credentials__basic__password=fossa123
-	```
+```bash
+bitbucket_server__credentials__basic__username=fossabot
+bitbucket_server__credentials__basic__password=fossa123
+```
 
 2. Ensure `fossabot` has global read access
 
@@ -68,6 +68,19 @@ FOSSA currently requires a companion bot account on your **Bitbucket Server** in
 Now you should be all set up! Users on FOSSA should be able browse and import their repositories on Bitbucket Server through **Bulk Import**.
 
 *NOTE: fossabot is not accessible to average users of FOSSA, but serves as an internal proxy for FOSSA to fetch code.  Normal users will only be able to browse and import what they have access to normally through Bitbucket Server.*
+
+## Configuring FOSSA
+If you've set up this configuration before installing FOSSA, you can ignore this step and use the default `setup.sh` prompts to complete the FOSSA install.
+
+Otherwise, ensure your `config.env` file on your FOSSA box has the following entries:
+
+```bash
+# Replace with your Bitbucket base URL, including protocol
+bitbucket_server__base_url={$BITBUCKET_BASE_URL} 
+bitbucket_server__credentials__oauth2__client_id=fossa
+bitbucket_server__credentials__basic__username=fossabot
+bitbucket_server__credentials__basic__password=fossa123
+```
 
 # Automatic Updates
 
