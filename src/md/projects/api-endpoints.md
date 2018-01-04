@@ -16,18 +16,4 @@ To use the API token, you must add it in the `Authorization` header of the reque
 
 ## API endpoints
 
-### `GET /api/revisions/:locator`
-
-Fetches .  The `locator` of a revision can be derived from visiting the API endpoint in the header of any revision page. 
-
-### `GET /api/revisions/:locator.svg`
-
-Render a rich, embeddable SVG plugin to summarize FOSSA analysis of a revision.
-
-### `GET /api/revisions/:locator/licenses`
-
-Fetches
-
-### `GET /api/revisions/:locator/dependencies`
-
-
+API documentation and access is currently only available to Enterprise customers.  Please contact [support@fossa.io](mailto:support@fossa.io) if you'd like to learn more.
