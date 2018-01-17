@@ -10,16 +10,22 @@
   - Docker 1.3+ (config'd to use `devicemapper` over AUFS), Bash 3.2+, curl & tar 
   - Port 80 (or whatever configured) exposed in firewall
 - SMTP server 
-- Postgres 9.3+ on a machine with >16 GB RAM, >30 GB HDD
 
 
 **Prepare the following:**
 
 - External IP (accessible to your users) of the box running FOSSA
 - SMTP server host/port
+- Connection details for additional integrations (see guides for GitHub, Bitbucket, JIRA and more...)
+
+** Optional prep**
+
+For evaluation purposes, FOSSA will ship with a built-in database.  However if you wish to scale your usage, you will need to prepare an external database that matches the following requirements:
+
+- Postgres 9.3+ on a machine with >16 GB RAM, >30 GB HDD
 - Postgres host, port, username & password
+- Configured with the FOSSA postgres extensions specified in the "manual" step of the installation guide
 - Database in Postgres named "fossa", accessible to the user
-- Database in Postgres named "rubygems", accessible to the user
 
 Make sure all of these endpoints are accessible from the machine running FOSSA.
 
