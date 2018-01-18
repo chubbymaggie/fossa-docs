@@ -36,6 +36,15 @@ fossa start 4
 # Reccomended max agents = GB Avail. Mem/2, rounded down (i.e. 32GB RAM/2 = 16 agents)
 ```
 
+When running the Automated Setup, FOSSA will boot with a default user with the following credentials:
+
+```
+  Username: admin
+  Password: admin
+```
+
+You can jump in to begin configuring your account and invite yourself/users from your organization.  It is highly reccomended you change the default password after initial setup at **Account Settings** > **Password**.
+
 ## Manual Setup
 
 ### 1. Set up the environment
