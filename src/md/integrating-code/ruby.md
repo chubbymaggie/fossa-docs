@@ -9,9 +9,7 @@ We look for and analyze the following files for license and dependency informati
  - `Gemfile`
  - `Gemfile.lock`
 
-FOSSA will find any package available on [www.rubygems.org](http://www.rubygems.org)
-
-We use the [rubygems.org weekly data dumps](https://rubygems.org/pages/data) to gather info on all gems.
+FOSSA will find any package available on [www.rubygems.org](http://www.rubygems.org), and also works with private sources as well.
 
 ## Private Packages
 
