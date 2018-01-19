@@ -15,7 +15,7 @@ FOSSA will find any package available on [www.rubygems.org](http://www.rubygems.
 
 In order for FOSSA to reach private scoped rubygems, you must configure auth for your rubygems source.
 
-To configure authentication, navigate to [Ruby Language Settings](/account/settings/languages/ruby) and supply the URL, username, and password
+To configure authentication, navigate to **Account Settings > Languages > Ruby** and supply the URL, username, and password for your private source
 
 ## Licenses
 
