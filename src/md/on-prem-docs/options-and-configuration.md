@@ -24,13 +24,6 @@ Postgres connection info
 `db__password`
 `db__database` - defaults to fossa
 
-`db_rubygems__enabled`
-`db_rubygems__host`
-`db_rubygems__port`
-`db_rubygems__username`
-`db_rubygems__password`
-`db_rubygems__database` - defaults to rubygems
-
 ## Advanced
 
 `app__redirect_server__enabled`

@@ -13,6 +13,12 @@ FOSSA will find any package available on [www.rubygems.org](http://www.rubygems.
 
 We use the [rubygems.org weekly data dumps](https://rubygems.org/pages/data) to gather info on all gems.
 
+## Private Packages
+
+In order for FOSSA to reach private scoped rubygems, you must configure auth for your rubygems source.
+
+To configure authentication, you must supply fossa the URL, username, and password configurable via **Project Settings > Builds and Languages > Ruby**.
+
 ## Licenses
 
 Declared licenses in `.gemspec` files will be picked up
@@ -25,7 +31,4 @@ We will ignore all `development` dependencies (added in `.gemspec` file with `ad
 
 ## Limitations
 
- - If a project is not available in the latest [rubygems.org weekly data dump](https://rubygems.org/pages/data), FOSSA will not analyze it.
- - We currently do not support custom sources. If a gem is not available on [rubygems.org](http://www.rubygems.org), we won't pick it up.
- - We currently do not support private gems that need authentication.
  - We currently do not support gems from `git` or `github` sources.
