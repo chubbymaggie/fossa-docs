@@ -17,7 +17,7 @@ We use the [rubygems.org weekly data dumps](https://rubygems.org/pages/data) to 
 
 In order for FOSSA to reach private scoped rubygems, you must configure auth for your rubygems source.
 
-To configure authentication, you must supply fossa the URL, username, and password configurable via **Project Settings > Builds and Languages > Ruby**.
+To configure authentication, navigate to [Ruby Language Settings](/account/settings/languages/ruby) and supply the URL, username, and password
 
 ## Licenses
 
