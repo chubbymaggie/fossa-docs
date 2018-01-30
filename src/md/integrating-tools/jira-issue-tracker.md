@@ -96,3 +96,13 @@ You can find the project key by looking:
 - At JIRA project URLs: `http://jira-url.com/projects/PROJECT_KEY/summary`
 - Issue keys: `PROJECTKEY-173`, `PROJECTKEY-244`
 - The right-hand details panel of each project summary page under `Key`
+
+## Troubleshooting
+
+If issues aren't getting exported, please check your logs for common errors:
+
+- *"The issue type selected is invalid."*
+
+When FOSSA generates a ticket, by default it sets the JIRA `issueType` to be `Task`.  This is one of the default issue types for new JIRA instalaltions, but your admin may have deleted/configured out this issue type or your installation could just be missing it.  Check on the existing issue types in JIRA and create the `Task` type if it is missing.
+
+See the [JIRA help doc](https://confluence.atlassian.com/jirakb/unable-to-move-issue-to-another-issue-type-due-to-the-issue-type-selected-is-invalid-error-227413483.html) for more instructions.
