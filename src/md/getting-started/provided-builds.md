@@ -95,6 +95,9 @@ analyze:
     # - name: example-php
     #   path: composer.json
     #   type: composerpackage
+    # - name: example-sbt
+    #   path: build.sbt
+    # . type: sbtpackage
 ```
 
 Before running, you must explicitly define which `modules` you want to scan in the following format:
