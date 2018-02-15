@@ -33,6 +33,7 @@ As long as FOSSA can reach your code, it will download and scan all of it for li
 - [*Golang **Alpha***](../../integrating-code/go)
 - [*Rust (Cargo) **Alpha***](../../integrating-code/rust)
 - [*PHP (Composer) **Alpha***](../../integrating-code/php)
+- [*Perl (CPAN) **Alpha***](../../integrating-code/perl)
 
 Coming Soon:
 
