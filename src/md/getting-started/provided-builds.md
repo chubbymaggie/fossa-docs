@@ -1,4 +1,4 @@
-# Provided Builds (Alpha)
+# Provided Builds
 
 After importing a project, FOSSA provides an alternative way integrate build and code analysis called "Provided Builds".
 
@@ -46,65 +46,18 @@ The FOSSA build plugin (`fossa`) is a lightweight `CLI` tool that interrogates a
 Run the following command from within your terminal or CI machine to get the latest version:
 
 ```bash
-CLI is only available to beta users; contact support@fossa.io to apply.
+  curl https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
 ```
 
-Then, add it to your `PATH` or transfer it to the root directory of the repository you want to anaylze. To test your installation, simply run `fossa` and look for this message:
+Then check your installation:
 
 ```bash
-CRITICAL no modules specified for analysis
+fossa --help
 ```
 
-**NOTE:** We reccomend only invoking `fossa` from within a `git` repository for now.
+### 3. Configuring your Repository
 
-### 3. Configuring the Plugin with `.fossa.yml`
-
-If you don't already have an API key, [generate a token using the instructions here](/docs/projects/api-endpoints/).
-
-Then, in the root directory of your repository, create a `.fossa.yml` or `.fossa.yaml` file with the following layout:
-
-#### Minimal Example:
-
-```yaml
-version: 1
-
-cli:
-  # NOTE: we recommend you set this via the FOSSA_API_KEY environment variable
-  api_key: some-key-here
-  # # Defaults to https://app.fossa.io, replace if you are on-prem
-  # server: https://fossa.on-prem
-
-analyze:
-  modules:
-    - name: example-gopackage
-      path: github.com/orgname/full/path/to/example-gopackage
-      type: gopackage
-    # # Examples of all other currently-supported module types:
-    # - name: example-js
-    #   path: package.json
-    #   type: commonjspackage
-    # - name: example-ruby
-    #   path: module/Gemfile
-    #   type: rubygem
-    # - name: example-java
-    #   path: example-java/pom.xml
-    #   type: mavenartifact
-    # - name: example-bower
-    #   path: bower.json
-    #   type: bowerpackage
-    # - name: example-php
-    #   path: composer.json
-    #   type: composerpackage
-    # - name: example-sbt
-    #   path: build.sbt
-    # . type: sbtpackage
-```
-
-Before running, you must explicitly define which `modules` you want to scan in the following format:
-
-- **Name** of the module
-- **Path** to the manifest or import identifier i.e. `module/package.json`
-- **Type** of the module listed in a supported format above
+Follow the [configuration guide on the GitHub](https://github.com/fossas/fossa-cli#configuration) to get started with configuring your repository.
 
 Once done, simply running `fossa` should succeed and generate a report link for your first Provided Build!
 
