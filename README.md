@@ -1,4 +1,7 @@
-# FOSSA Documentation - http://fossa.io/docs
+![FOSSA](https://raw.githubusercontent.com/fossas/fossa-docs/master/header.png)
+
+# FOSSA Documentation 
+View the docs live at (http://fossa.io/docs)[http://fossa.io/docs]
 
 ## Contributing
 
